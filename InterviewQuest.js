@@ -1,45 +1,45 @@
 //  Question 1
 
-console.log(2+"2");  // op: 22   here + concatenates two values if atleast one is string
-console.log("2"+"2"); // op: 22 0
-console.log(2-"2"); // op: 0     here - converts string to number to perform substraction
-console.log("2"+"2"); // 22
-var a=3;
-var b="b";
-console.log(a-b);  // op: nan    here a and b are not valid values to convert to int
+console.log(2 + "2"); // op: 22   here + concatenates two values if atleast one is string
+console.log("2" + "2"); // op: 22 0
+console.log(2 - "2"); // op: 0     here - converts string to number to perform substraction
+console.log("2" + "2"); // 22
+var a = 3;
+var b = "b";
+console.log(a - b); // op: nan    here a and b are not valid values to convert to int
 
 //  Question 2
 
-console.log(10<20<30); // op: true     
+console.log(10 < 20 < 30); // op: true
 /* in line 11 here javascript relational operators are evaluated from left to right 
    so 10<20 gives false which is equivalent to 1 while comparing and then 1<30 returns true */
 
-console.log(30>20>10); // op: false same explanation as above
+console.log(30 > 20 > 10); // op: false same explanation as above
 
 //  Question 3
 
-console.log(null==0); // op: false
+console.log(null == 0); // op: false
 /* in java script equality and comparisions behave differently
    for equality comparision null and undefined are comparable, 0, false and ""(empty string) are comparable
    null and 0 are not comparable  */
 
-console.log(null>0); // op: false
+console.log(null > 0); // op: false
 /* for number comparision if one operand is number it attempts to convert other operand to number
    null becomes zero and undefined becomes nan */
 
-console.log(null>=0); // op: true
+console.log(null >= 0); // op: true
 
 //  Question 4
 
-const elements= [1,2,3,4,5]
-elements.forEach(element=>{
-    console.log(element);
-    if(element==2){
-        return;
-        // break;
-        // continue;
-    }
-}) 
+const elements = [1, 2, 3, 4, 5];
+elements.forEach((element) => {
+  console.log(element);
+  if (element == 2) {
+    return;
+    // break;
+    // continue;
+  }
+});
 // op:
 // 1
 // 2
@@ -55,11 +55,11 @@ elements.forEach(element=>{
 
 // Question 5
 
-var value=1;
+var value = 1;
 
-function myFun(){
-    console.log(value);
-    var value=2;
+function myFun() {
+  console.log(value);
+  var value = 2;
 }
 myFun(); // op: undefined
 
@@ -68,10 +68,10 @@ myFun(); // op: undefined
 
 // Question 6
 
-for(var i=0;i<3;i++){
-    setTimeout(function(){
-        console.log(i);
-    },i*1000);
+for (var i = 0; i < 3; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 1000);
 }
 // op:
 // 3
@@ -83,11 +83,12 @@ for(var i=0;i<3;i++){
    but if we use let instead of var scope of variable is block and each value i is printed separately 
    with each iterated value. we can also write above code asbelow  */
 
-   for(let j=0;j<3;j++){
-    setTimeout(function(){ // can also pass i 
-        console.log(j);
-    },j*1000);
-   }
+for (let j = 0; j < 3; j++) {
+  setTimeout(function () {
+    // can also pass i
+    console.log(j);
+  }, j * 1000);
+}
 
 // op:
 // 0
