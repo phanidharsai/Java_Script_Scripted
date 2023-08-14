@@ -1,10 +1,10 @@
 /************ VARIABLE SCOPES (region of program where a defined variable can exist and be recognized) eg Global, Function, Block
 var vs let vs const,     var - global   let and const - block ******************/
 
-//global  it is accessible anywhere in the program
+//global - it is accessible anywhere in the program
 var a; 
 
-//function  accessible within function
+//function - it is accessible within the function
 
 function func(){
 
@@ -29,7 +29,7 @@ console.log(b2)  // op: 37
 function test(){
     let t = "Phani"
     if(true){
-        let t = "phanidhar" /* value of t is only changed in this block, outside its stil phani this is SHADOWING
+        let t = "phanidhar" /* value of t is only changed in this block, outside its stil phani this is ***SHADOWING***
         variable t in block is shadowing variable t which is outside block in function*/
         // var t = "phanidhar" 
         /* above line gives error as let and const cannot be redeclared in same scope, 
@@ -44,8 +44,8 @@ test()
 
 var d1
 var d1 // can be redeclared
+// let d2 
 // let d2 // gives error as const and let cannot be redeclared
-// let d2
 
 var i1 // works fine
 // let i2   // gives error as let and const should be initialized while declaring
@@ -63,9 +63,9 @@ const ri3 =69
  * during creation phase javascript engine moves variable and function declarations to top of code  *********/
 
 // var h1 // by default javascript will look at this code like this which has var declared at top
-console.log("hoisting "+a) // op: undefined         
+console.log("hoisting "+h1) // op: undefined         
 /* output is undefined instead of error because of hoisting, works only for var gives ERROR for let and const
   if let or const is used they are stored in "temporal dead zone" which is time between declaration and initialization*/
-var h = 16
+var h1 = 16
 
 

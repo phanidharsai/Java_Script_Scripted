@@ -7,7 +7,7 @@ const fibonacci = function (n) {
   for (let i = 2; i <= n; i++) {
     arr.push(arr[i - 1] + arr[i - 2]);
   }
-  return arr[7];
+  return arr;
 };
 
 console.log(fibonacci(7));
